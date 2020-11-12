@@ -1,13 +1,21 @@
 @extends('layouts.nucleo')
+
 @section("title")
 <title>Inicio - SICLI</title>
 @endsection
+
+@section("css")
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/vendor/lightbox2/css/lightbox.min.css')}}">
+<!--===============================================================================================-->
+@endsection
+
 @section("contenido")
 	<!-- header fixed -->
 	<div class="wrap_header fixed-header2 trans-0-4">
 		<!-- Logo -->
 		<a href="index.html" class="logo">
-			<img src="images/icons/logo.png" alt="IMG-LOGO" width="100px">
+			<img src="{{URL::asset('assets/images/icons/logo.png')}}" alt="IMG-LOGO" width="100px">
 		</a>
 
 		<!-- Menu -->
@@ -15,19 +23,19 @@
 			<nav class="menu">
 				<ul class="main_menu">
 					<li>
-						<a href="index.html">Home</a>
+						<a href="{{$page = 'home'}}">Home</a>
 					</li>
 
 					<li>
-						<a href="product.html">Productos</a>
+						<a href="{{$page = 'productos'}}">Productos</a>
 					</li>
 
 					<li>
-						<a href="about.html">About</a>
+						<a href="{{$page = 'home'}}">Acerca de</a>
 					</li>
 
 					<li>
-						<a href="contact.html">Contact</a>
+						<a href="{{$page = 'home'}}">Contactanos</a>
 					</li>
 				</ul>
 			</nav>
@@ -123,9 +131,9 @@
 
 	<!-- top noti -->
 	<div class="flex-c-m size22 bg0 s-text21 pos-relative">
-		20% off everything!
-		<a href="product.html" class="s-text22 hov6 p-l-5">
-			Shop Now
+		Conoce Productos Buscados Más Destacados!
+		<a href="{{ url('/' . $page='productos') }}" class="s-text22 hov6 p-l-5">
+			Ir ahora
 		</a>
 
 		<button class="flex-c-m pos2 size23 colorwhite eff3 trans-0-4 btn-romove-top-noti">
@@ -134,369 +142,64 @@
 	</div>
 
 	<!-- Header -->
-	<header class="header2">
-		<!-- Header desktop -->
-		<div class="container-menu-header-v2 p-t-26">
-			<div class="topbar2">
-				<div class="topbar-social">
-					<a href="#" class="topbar-social-item fa fa-facebook"></a>
-					<a href="#" class="topbar-social-item fa fa-instagram"></a>
-					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-				</div>
-
-				<!-- Logo2 -->
-				<a href="index.html" class="logo2">
-					<img src="{{URL::asset('assets/images/icons/logo.png')}}" alt="IMG-LOGO" width="100px">
-				</a>
-
-				<div class="topbar-child2">
-					<span class="topbar-email">
-						fashe@example.com
-					</span>
-
-					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-							<option>EUR</option>
-						</select>
-					</div>
-
-					<!--  -->
-					<a href="#" class="header-wrapicon1 dis-block m-l-30">
-						<img src="{{URL::asset('assets/images/icons/icon-header-01.png')}}" class="header-icon1" alt="ICON">
-					</a>
-
-					<span class="linedivide1"></span>
-
-					<div class="header-wrapicon2 m-r-13">
-						<img src="{{URL::asset('assets/images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
-
-						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="{{URL::asset('assets/images/item-cart-01.jpg')}}" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="{{URL::asset('assets/images/item-cart-02.jpg')}}" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="{{URL::asset('assets/images/item-cart-03.jpg')}}" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
-							</ul>
-
-							<div class="header-cart-total">
-								Total: $75.00
-							</div>
-
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										View Cart
-									</a>
-								</div>
-
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="wrap_header">
-
-				<!-- Menu -->
-				<div class="wrap_menu">
-					<nav class="menu">
-						<ul class="main_menu">
-							<li>
-								<a href="index.html">Home</a>
-							</li>
-
-							<li>
-								<a href="product.html">Productos</a>
-							</li>
-							
-							<li>
-								<a href="about.html">About</a>
-							</li>
-
-							<li>
-								<a href="contact.html">Contact</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
-				<!-- Header Icon -->
-				<div class="header-icons">
-
-				</div>
-			</div>
-		</div>
-
-		<!-- Header Mobile -->
-		<div class="wrap_header_mobile">
-			<!-- Logo moblie -->
-			<a href="index.html" class="logo-mobile">
-				<img src="{{URL::asset('assets/images/icons/logo.png')}}" alt="IMG-LOGO">
-			</a>
-
-			<!-- Button show menu -->
-			<div class="btn-show-menu">
-				<!-- Header Icon mobile -->
-				<div class="header-icons-mobile">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="{{URL::asset('assets/images/icons/icon-header-01.png')}}" class="header-icon1" alt="ICON">
-					</a>
-
-					<span class="linedivide2"></span>
-
-					<div class="header-wrapicon2">
-						<img src="{{URL::asset('assets/images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
-
-						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="{{URL::asset('assets/images/item-cart-01.jpg')}}" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="{{URL::asset('assets/images/item-cart-02.jpg')}}" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="{{URL::asset('assets/images/item-cart-03.jpg')}}" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
-							</ul>
-
-							<div class="header-cart-total">
-								Total: $75.00
-							</div>
-
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										View Cart
-									</a>
-								</div>
-
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</div>
-			</div>
-		</div>
-
-		<!-- Menu Mobile -->
-		<div class="wrap-side-menu" >
-			<nav class="side-menu">
-				<ul class="main-menu">
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							Free shipping for standard order over $100
-						</span>
-					</li>
-
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<div class="topbar-child2-mobile">
-							<span class="topbar-email">
-								fashe@example.com
-							</span>
-
-							<div class="topbar-language rs1-select2">
-								<select class="selection-1" name="time">
-									<option>USD</option>
-									<option>EUR</option>
-								</select>
-							</div>
-						</div>
-					</li>
-
-					<li class="item-topbar-mobile p-l-10">
-						<div class="topbar-social-mobile">
-							<a href="#" class="topbar-social-item fa fa-facebook"></a>
-							<a href="#" class="topbar-social-item fa fa-instagram"></a>
-							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-						</div>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="index.html">Home</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="product.html">Productos</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="about.html">About</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="contact.html">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+	@include('layouts.header2')
 
 	<!-- Slide1 -->
 	<section class="slide1">
 		<div class="wrap-slick1">
 			<div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(images/master-slide-07.jpg);">
+				<div class="item-slick1 item1-slick1" style="background-image: url(assets/images/master-slide-07.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="fadeInUp">
-							Leather Bags
+							Tienes algo que otro busca 
 						</h2>
 
 						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="fadeInDown">
-							New Collection 2018
+							Te pagaran por las cosas que no usas
 						</span>
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
 							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
+							<a href="{{ url('/' . $page='productos') }}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+								Vender
 							</a>
 						</div>
 					</div>
 				</div>
 
-				<div class="item-slick1 item2-slick1" style="background-image: url(images/master-slide-06.jpg);">
+				<div class="item-slick1 item2-slick1" style="background-image: url(assets/images/master-slide-06.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="rollIn">
-							Leather Bags
+							Vende tus cosas que no usas
 						</h2>
 
 						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="lightSpeedIn">
-							New Collection 2018
+							Te pagaran por las cosas que no usas
 						</span>
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
 							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
+							<a href="{{ url('/' . $page='productos') }}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+								Vender
 							</a>
 						</div>
 					</div>
 				</div>
 
-				<div class="item-slick1 item3-slick1" style="background-image: url(images/master-slide-02.jpg);">
+				<div class="item-slick1 item3-slick1" style="background-image: url(assets/images/master-slide-02.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="rotateInDownLeft">
-							Leather Bags
+							vende tus cosas con precio justo
 						</h2>
 
 						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="rotateInUpRight">
-							New Collection 2018
+							Te pagaran por las cosas que no usas
 						</span>
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
 							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
+							<a href="{{ url('/' . $page='productos') }}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+								Vender
 							</a>
 						</div>
 					</div>
@@ -518,7 +221,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Sunglasses
+								Chamarras
 							</a>
 						</div>
 					</div>
@@ -532,7 +235,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Watches
+								Computadores
 							</a>
 						</div>
 					</div>
@@ -546,7 +249,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Bags
+								Maletas
 							</a>
 						</div>
 					</div>
@@ -561,7 +264,7 @@
 		<div class="container">
 			<div class="sec-title p-b-22">
 				<h3 class="m-text5 t-center">
-					Our Products
+					Productos buscados
 				</h3>
 			</div>
 
@@ -570,16 +273,16 @@
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
 					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#best-seller" role="tab">Best Seller</a>
+						<a class="nav-link active" data-toggle="tab" href="#best-seller" role="tab">Más Buscados</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#featured" role="tab">Featured</a>
+						<a class="nav-link" data-toggle="tab" href="#featured" role="tab">Destacados</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#sale" role="tab">Sale</a>
+						<a class="nav-link" data-toggle="tab" href="#sale" role="tab">Mejor Pagados</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#top-rate" role="tab">Top Rate</a>
+						<a class="nav-link" data-toggle="tab" href="#top-rate" role="tab">Mejor Calificado</a>
 					</li>
 				</ul>
 
@@ -603,14 +306,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -636,14 +339,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Denim jacket blue
 										</a>
 
@@ -669,14 +372,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Coach slim easton black
 										</a>
 
@@ -702,14 +405,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -735,14 +438,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -768,14 +471,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Denim jacket blue
 										</a>
 
@@ -801,14 +504,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Coach slim easton black
 										</a>
 
@@ -834,14 +537,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Frayed denim shorts
 										</a>
 
@@ -876,14 +579,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Frayed denim shorts
 										</a>
 
@@ -913,14 +616,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -946,14 +649,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Denim jacket blue
 										</a>
 
@@ -979,14 +682,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -1012,14 +715,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Frayed denim shorts
 										</a>
 
@@ -1049,14 +752,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -1082,14 +785,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Denim jacket blue
 										</a>
 
@@ -1120,14 +823,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -1153,14 +856,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Denim jacket blue
 										</a>
 
@@ -1186,14 +889,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -1208,7 +911,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-										<img src="images/item-08.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-08.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1219,14 +922,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Denim jacket blue
 										</a>
 
@@ -1246,7 +949,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-										<img src="images/item-02.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-02.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1257,14 +960,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -1279,7 +982,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative">
-										<img src="images/item-03.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-03.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1290,14 +993,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Denim jacket blue
 										</a>
 
@@ -1312,7 +1015,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative">
-										<img src="images/item-05.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-05.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1323,14 +1026,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Coach slim easton black
 										</a>
 
@@ -1345,7 +1048,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-										<img src="images/item-07.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-07.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1356,14 +1059,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Frayed denim shorts
 										</a>
 
@@ -1382,7 +1085,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative">
-										<img src="images/item-10.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-10.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1393,14 +1096,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Coach slim easton black
 										</a>
 
@@ -1415,7 +1118,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-										<img src="images/item-11.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-11.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1426,14 +1129,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Frayed denim shorts
 										</a>
 
@@ -1452,7 +1155,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-										<img src="images/item-12.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-12.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1463,14 +1166,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Herschel supply co 25l
 										</a>
 
@@ -1485,7 +1188,7 @@
 								<!-- Block2 -->
 								<div class="block2">
 									<div class="block2-img wrap-pic-w of-hidden pos-relative">
-										<img src="images/item-15.jpg" alt="IMG-PRODUCT">
+										<img src="{{URL::asset('assets/images/item-15.jpg')}}" alt="IMG-PRODUCT">
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -1496,14 +1199,14 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													Ofrecer
 												</button>
 											</div>
 										</div>
 									</div>
 
 									<div class="block2-txt p-t-20">
-										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										<a href="{{ url('/' . $page='product/15') }}" class="block2-name dis-block s-text3 p-b-5">
 											Denim jacket blue
 										</a>
 
@@ -1522,7 +1225,7 @@
 
 
 	<!-- Banner video -->
-	<section class="parallax0 parallax100" style="background-image: url(images/bg-video-01.jpg);">
+	<section class="parallax0 parallax100" style="background-image: url(assets/images/bg-video-01.jpg);">
 		<div class="overlay0 p-t-190 p-b-200">
 			<div class="flex-col-c-m p-l-15 p-r-15">
 				<span class="m-text9 p-t-45 fs-20-sm">
@@ -1555,7 +1258,7 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-01.jpg" alt="IMG-BLOG">
+							<img src="{{URL::asset('assets/images/blog-01.jpg')}}" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -1579,7 +1282,7 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-02.jpg" alt="IMG-BLOG">
+							<img src="{{URL::asset('assets/images/blog-02.jpg')}}" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -1603,7 +1306,7 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-03.jpg" alt="IMG-BLOG">
+							<img src="{{URL::asset('assets/images/blog-03.jpg')}}" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -1637,7 +1340,7 @@
 		<div class="flex-w">
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-03.jpg" alt="IMG-INSTAGRAM">
+				<img src="{{URL::asset('assets/images/gallery-03.jpg')}}" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1659,7 +1362,7 @@
 
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-07.jpg" alt="IMG-INSTAGRAM">
+				<img src="{{URL::asset('assets/images/gallery-07.jpg')}}" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1681,7 +1384,7 @@
 
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-09.jpg" alt="IMG-INSTAGRAM">
+				<img src="{{URL::asset('assets/images/gallery-09.jpg')}}" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1703,7 +1406,7 @@
 
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-13.jpg" alt="IMG-INSTAGRAM">
+				<img src="{{URL::asset('assets/images/gallery-13.jpg')}}" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1725,7 +1428,7 @@
 
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-15.jpg" alt="IMG-INSTAGRAM">
+				<img src="{{URL::asset('assets/images/gallery-15.jpg')}}" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -1801,7 +1504,7 @@
 			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
 
 			<div class="wrap-video-mo-01">
-				<div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
+				<div class="w-full wrap-pic-w op-0-0"><img src="{{URL::asset('assets/images/icons/video-16-9.jpg')}}" alt="IMG"></div>
 				<div class="video-mo-01">
 					<iframe src="https://www.youtube.com/embed/Nt8ZrWY2Cmk?rel=0&amp;showinfo=0" allowfullscreen></iframe>
 				</div>
@@ -1817,14 +1520,14 @@
 		});
 	</script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/slick-custom.js"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/vendor/slick/slick.min.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/js/slick-custom.js')}}"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/vendor/sweetalert/sweetalert.min.js')}}"></script>
 	<script type="text/javascript">
 		$('.block2-btn-addcart').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
@@ -1842,7 +1545,7 @@
 	</script>
 
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/vendor/parallax100/parallax100.js')}}"></script>
 	<script type="text/javascript">
         $('.parallax100').parallax100();
 	</script>

@@ -65792,7 +65792,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  */
 
 
-__webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
+__webpack_require__(/*! ./components/startApp */ "./resources/js/components/startApp.js");
 
 /***/ }),
 
@@ -65841,6 +65841,25 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/Configuration.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/Configuration.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var url_principal = "http://127.0.0.1:8000/";
+var url_images = url_principal + 'assets/images/';
+var Configuration = {
+  url_principal: url_principal,
+  url_images: url_images
+};
+/* harmony default export */ __webpack_exports__["default"] = (Configuration);
+
+/***/ }),
+
 /***/ "./resources/js/components/Example.js":
 /*!********************************************!*\
   !*** ./resources/js/components/Example.js ***!
@@ -65875,9 +65894,22 @@ function Example() {
 
 /* harmony default export */ __webpack_exports__["default"] = (Example);
 
-if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById('example'));
+if (document.getElementById('examples')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById('examples'));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/startApp.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/startApp.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./Configuration */ "./resources/js/components/Configuration.js");
+
+__webpack_require__(/*! ./Example */ "./resources/js/components/Example.js");
 
 /***/ }),
 

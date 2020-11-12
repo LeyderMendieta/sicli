@@ -25,9 +25,9 @@
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/vendor/daterangepicker/daterangepicker.css')}}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/vendor/slick/slick.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/vendor/lightbox2/css/lightbox.min.css')}}">
-<!--===============================================================================================-->
+	
+	@yield("css")
+
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/util.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/main.css')}}">
 <!--===============================================================================================-->
