@@ -17,7 +17,7 @@
 	<!-- Title Page -->
 	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(assets/images/heading-pages-06.jpg);">
 		<h2 class="l-text2 t-center">
-			About
+			Acerca de
 		</h2>
 	</section>
 
@@ -33,7 +33,7 @@
 
 				<div class="col-md-8 p-b-30">
 					<h3 class="m-text26 p-t-15 p-b-16">
-						Our story
+						Nuestra Historia
 					</h3>
 
 					<p class="p-b-28">

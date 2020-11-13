@@ -11,7 +11,7 @@
             </div>
 
             <span class="topbar-child1">
-                Free shipping for standard order over $100
+                Comprar y vende lo que quieres
             </span>
 
             <div class="topbar-child2">
@@ -242,7 +242,7 @@
             <ul class="main-menu">
                 <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
                     <span class="topbar-child1">
-                        Free shipping for standard order over $100
+                        Vende y Compra lo que quieres $100
                     </span>
                 </li>
 

@@ -1229,16 +1229,16 @@
 		<div class="overlay0 p-t-190 p-b-200">
 			<div class="flex-col-c-m p-l-15 p-r-15">
 				<span class="m-text9 p-t-45 fs-20-sm">
-					The Beauty
+					Experiencias con SICLI
 				</span>
 
 				<h3 class="l-text1 fs-35-sm">
-					Lookbook
+					Vende
 				</h3>
 
 				<span class="btn-play s-text4 hov5 cs-pointer p-t-25" data-toggle="modal" data-target="#modal-video-01">
 					<i class="fa fa-play" aria-hidden="true"></i>
-					Play Video
+					Ver Video
 				</span>
 			</div>
 		</div>
@@ -1249,7 +1249,7 @@
 		<div class="container">
 			<div class="sec-title p-b-52">
 				<h3 class="m-text5 t-center">
-					Our Blog
+					Nuestro Blog
 				</h3>
 			</div>
 
@@ -1264,12 +1264,12 @@
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									Black Friday Guide: Best Sales & Discount Codes
+									Guia Black Friday: Mejores descuentos y compras
 								</a>
 							</h4>
 
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
+							<span class="s-text6">By</span> <span class="s-text7">Leyder Mendieta</span>
+							<span class="s-text6">on</span> <span class="s-text7">Julio 22, 2019</span>
 
 							<p class="s-text8 p-t-16">
 								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
@@ -1288,12 +1288,12 @@
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									The White Sneakers Nearly Every Fashion Girls Own
+									Las chicas fashion tienen su propio look
 								</a>
 							</h4>
 
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 18, 2017</span>
+							<span class="s-text6">By</span> <span class="s-text7">Nancy Perez</span>
+							<span class="s-text6">on</span> <span class="s-text7">Mayo 22, 2020</span>
 
 							<p class="s-text8 p-t-16">
 								Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit ame
@@ -1312,12 +1312,12 @@
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									New York SS 2018 Street Style: Annina Mislin
+									Recorre las calles con estilo en la ciudad
 								</a>
 							</h4>
 
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 2, 2017</span>
+							<span class="s-text6">By</span> <span class="s-text7">Michael Rodriguez</span>
+							<span class="s-text6">on</span> <span class="s-text7">Enero 20, 2018</span>
 
 							<p class="s-text8 p-t-16">
 								Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc
@@ -1333,7 +1333,7 @@
 	<section class="instagram p-t-20">
 		<div class="sec-title p-b-52 p-l-15 p-r-15">
 			<h3 class="m-text5 t-center">
-				@ follow us on Instagram
+				Siguenos en Instagram @SICLI
 			</h3>
 		</div>
 
@@ -1506,7 +1506,7 @@
 			<div class="wrap-video-mo-01">
 				<div class="w-full wrap-pic-w op-0-0"><img src="{{URL::asset('assets/images/icons/video-16-9.jpg')}}" alt="IMG"></div>
 				<div class="video-mo-01">
-					<iframe src="https://www.youtube.com/embed/Nt8ZrWY2Cmk?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/UiHHqO4cBgo?rel=0&amp;showinfo=0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>

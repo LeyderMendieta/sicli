@@ -2,12 +2,12 @@
 		<div class="flex-w p-b-90">
 			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
-					GET IN TOUCH
+					Mantengamos en Contacto
 				</h4>
 
 				<div>
 					<p class="s-text7 w-size27">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+						Alguna Pregunta? Dejanos saber llamando al +57 320 8463317 ó la dirección CRA 2F #3 - 19 Soacha Cundinamarca.
 					</p>
 
 					<div class="flex-m p-t-30">
@@ -22,31 +22,31 @@
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Categories
+					Categorias
 				</h4>
 
 				<ul>
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Men
+						Hogar
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Women
+						Vehiculos
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Dresses
+						Tecnologia
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Sunglasses
+						Accesorios
 						</a>
 					</li>
 				</ul>
@@ -54,31 +54,31 @@
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Links
+					Paginas
 				</h4>
 
 				<ul>
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Search
+							Buscar
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							About Us
+							Acerca de
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Contact Us
+							Contactanos
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Returns
+							Quejas
 						</a>
 					</li>
 				</ul>
@@ -86,31 +86,31 @@
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Help
+					Ayuda
 				</h4>
 
 				<ul>
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Track Order
+							Solicitudes
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Returns
+							Reclamos
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Shipping
+							Compras
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							FAQs
+							PQRS
 						</a>
 					</li>
 				</ul>
@@ -118,7 +118,7 @@
 
 			<div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
-					Newsletter
+					Mantente comunicado
 				</h4>
 
 				<form>
@@ -130,7 +130,7 @@
 					<div class="w-size2 p-t-20">
 						<!-- Button -->
 						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-							Subscribe
+							Subscribete
 						</button>
 					</div>
 
@@ -139,28 +139,9 @@
 		</div>
 
 		<div class="t-center p-l-15 p-r-15">
-			<a href="#">
-				<img class="h-size2" src="{{URL::asset('assets/images/icons/paypal.png')}}" alt="IMG-PAYPAL">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="{{URL::asset('assets/images/icons/visa.png')}}" alt="IMG-VISA">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="{{URL::asset('assets/images/icons/mastercard.png')}}" alt="IMG-MASTERCARD">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="{{URL::asset('assets/images/icons/express.png')}}" alt="IMG-EXPRESS">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="{{URL::asset('assets/images/icons/discover.png')}}" alt="IMG-DISCOVER">
-			</a>
 
 			<div class="t-center s-text8 p-t-20">
-				Copyright © 2020 All rights reserved. Created by Leyder Mendieta for UNINPAHU
+				Copyright © 2020 Todos los derechos reservados. Creado por Leyder Mendieta for UNINPAHU
 			</div>
 		</div>
 	</footer>
